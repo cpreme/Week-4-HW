@@ -1,0 +1,322 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>STRING OPERATIONS</h1>
+
+	<P>Exercise 1 (in class) : Create a function that does String Opertions. 
+		Create three prompts user needs to ask for first name, 
+		last name, and what they like to do for fun. 
+		Alert to the user the complete sentence, combining their first name, 
+		last name, and what they like to do for fun
+	</P>
+
+	<script type="text/javascript">
+
+	function doStringOperations() {
+		var first = prompt("What is your first name?");
+		var last = prompt("What is your last name?");
+		var fun = prompt("What do you like to do for fun?");
+		alert(first+ " "+ last +" " + "likes to " +fun);
+	}
+
+	</script>
+
+	<H1>MATH OPERATIONS</H1>
+	<P>
+		Exercise 2 (in class) : Create a function that adds two numbers and returns the value either in console.log or via an alert
+	</P>
+
+	<SCRIPT TYPE="text/javascript">
+	function addTwoNumbers() {
+		var num1 = parseInt(prompt("Give me a number"));
+		var num2 = parseInt(prompt("Give me a second number"));
+		return num1 + num2;
+	}
+
+// addTwoNumbers();
+
+</SCRIPT>
+
+<h1 style="color:red">MATH OPERATIONS --> HOMEWORK</h1>
+<p>Exercise 2 (homework):
+	<ol>
+		<li>Now, refactor the above function that does the same thing, but instead of prompting the user, you will take in 2 parameters. Return the sum. 
+		</li>
+		<li>Create a NEW function called "addTwoNumbersChained" and within the function body, call the addTwoNumbers() function and passing in 1, 2 as arguments and store that value into a new variable called "sum".
+		</li>
+		<li>Create another variable called "anotherSum" and set that equal to your "sum" + addTwoNumbers(), passing in 3,4 as arguments.
+		</li>
+		<li>Return "anotherSum"</li>
+	</ol>
+</p>
+es
+<script type="text/javascript">
+
+function addTwoNumbers(x,y) {
+	var numSum = x + y;
+		// console.log(numSum);
+		return numSum;
+	}
+
+	addTwoNumbers();
+
+	function addTwoNumbersChained() {
+		var sum = addTwoNumbers(1,2);
+		var anotherSum = sum + addTwoNumbers(3,4);
+	// console.log(sum,anotherSum);
+	return anotherSum;
+}
+
+addTwoNumbersChained();
+
+</script>
+
+
+<h1>Averages Math Operations</h1>
+<p>Exercise 3: Create a function that computes the average age of three people. You can choose to create this function by passing in arguments or asking user for their ages.
+</p>
+<script type="text/javascript">
+
+function computeAverageAge() {
+	var firstAge = 32;
+	var secondAge = 44;
+	var thirdAge = 26;
+
+	var average = (firstAge + secondAge + thirdAge) / 3;
+	console.log(average);
+}
+</script>
+
+<h1>Find the Max Age</h1>
+<p>
+	Exercise 4: Create a function that takes in ages from 4 users and computes the max age of all the users. Example output: Alert out "The oldest person in this group is: 45 years old."
+</p>
+
+<script type="text/javascript">
+function computeMaxAge() {
+	var firstAge = 32;
+	var secondAge = 44;
+	var thirdAge = 26;
+
+	var maxAge = -1;
+
+	if (firstAge > maxAge) {
+		maxAge = firstAge;
+	}
+
+	if (secondAge > maxAge) {
+		maxAge = secondAge;
+	}
+
+	if (thirdAge > maxAge) {
+		maxAge = thirdAge;
+	}
+
+	console.log(maxAge);
+}
+</script>
+
+<h1>Is the number even?</h1>
+<p>
+	Exercise 5: Create a function that takes in a number and alerts out if the number is even or odd.
+</p>
+
+<script type="text/javascript">
+function evenOdd() {
+	var num = parseInt(prompt("Give me a number please"));
+	if (numb%2 ==0){
+		alert ("Your number is even");
+
+	} else {
+		alert("Your number is odd");
+
+	}
+}
+</script>
+
+<h1>Console Log the Day of the week</h1>
+<p>
+	Exercise 6: Create a function that takes in the "day" of the week in as a a number, but console.logs out the day of the week in words.
+	if the user puts "7"-- then it would say: Example: "Today is Sunday"
+</p>
+<script type="text/javascript">
+
+function smartGreeting(dayOfWeek) {
+	if (dayOfWeek == 1) {
+		console.log('Happy Monday');
+	} else if (dayOfWeek == 2) {
+		console.log('Happy Tuesday');
+	} else if (dayOfWeek == 3) {
+		console.log('Happy Wednesday');
+	} else {
+	    // Of course you can continue to check for Thursday, Friday, Saturday, Sunday ...
+	    console.log('It is neither Monday nor Tuesday nor Wednesday');
+	  }
+	}
+	</script>
+
+	<h1>Getting into the bar</h1>
+	<p>
+		Exercise 7: Create a function asks for the gender of the patron and their age.If they are female and over the age of 21, then they are allowed into the bar. console.log the message: "Come on in!" If they don't fit criteria, then say "we are closed!"
+	</p>
+
+	<script type="text/javascript">
+
+	function letInBar(gender, age) {
+	  // Let in bar if female and 21 and over.
+	  if (age >= 21 && gender == 'f') {
+	  	console.log('Let em in!');
+	  } else {
+	  	console.log('We are closed!');
+	  }
+
+	}
+
+//here is another decision structure. 
+
+function classify(gender, age) {
+	if (gender == 'male') {
+		if (age < 21) {
+			console.log('Underage male.');
+	    } else if (age >= 21) { // This could also just be 'else'.
+	    console.log('Adult male.');
+	  }
+	} else if (gender == 'female') {
+		if (age < 21) {
+			console.log('Underage female.');
+	    } else if (age >= 21) { // This could also just be 'else'.
+	    console.log('Adult female.');
+	  }
+	} else {
+		console.log('Unknown.');
+	}
+}
+
+</script>
+
+<h1>Getting ticket prices</h1>
+<p>
+	Exercise 8: Create a function that asks the user the "from" and "to" that they are flying to. (create an alert to tell them there is an error if "to" and "from" are the same) (we only want flight prices between sfo, lax, and nyc) different prices for different cities is preferable (sfo - lax == $400, vs lax to nyc is $500 vs nyc to sfo is $700 for instance. ) try to use: "==" "!=" "&&" "||"
+
+	<h1 style="color:red">Exercise 8 (homework)</h1>
+	<ol>
+		<li>Try to refactor your current code to include all potential possibilities. As a programmer, you want to be able to anticipate and mitigate problems from user input. Restricting the user based on instructions assumes the user will follow your instructions.</li>
+		<li>If you didn't use any nested "if's" review the version of this code and see if you can code a similar version in your refactoring.</li>
+	</ol>
+</p>
+
+<script type="text/javascript">
+
+function getFlightCost(from, to) {
+		// var from = prompt("Where are you flying out from?");
+		// var to = prompt("Where are you flying too?");
+
+	 // validate to/from are filled in
+
+	  if (from == "" || to == "") {
+	  	return "You must enter both a DESTINATION and ORIGINATION"
+	  }
+
+	  // Error handling.
+	  if (from == to) {
+	  	return "Your DESTINATION and ORIGINATION cities must be different";
+	  }
+	  
+	  // validate to/from are allowed airport codes 
+	  if (from != 'sfo' && from != 'jfk' && from != 'lax') {
+	  	return 'Unrecognized FROM city.';
+	  }
+
+	  if (to != 'sfo' && to != 'jfk' && to != 'lax') {
+	  	return 'Unrecognized TO city.'; 
+	  }
+	 
+	  if (from == 'sfo') {
+	  	if (to == 'jfk') {
+	      // Flying from SFO to JFK. Feel free to make up the price.
+	      return 'Your flight from ' +from + ' to ' +to + ' is 567.45';	
+
+	    } else if (to == 'lax') {
+	      // Flying from SFO to LAX. Feel free to make up the price.
+	      return 'Your flight from ' +from + ' to ' +to + ' is 367.45';
+	    }
+	  } else if (from == 'jfk') {
+	  	// Flying from JFK to LAX. Feel free to make up the price.
+	  	return 'Your flight from ' +from + ' to ' +to + ' is 467.45';
+
+	  } else if (from == 'lax') {
+	  	// Flying from LAX to JFK. Feel free to make up the price.
+	  	return 'Your flight from ' +from + ' to ' +to + ' is 667.45';
+	  }
+	}
+
+	getFlightCost();
+
+	</script>
+
+
+	<h1 style="color:red">Exercise 9 (homework)-using "indexOf" string method.</h1>
+	<p>
+		<ol>
+			<li>Read through this short documentation on the string method "indexOf" Pay close attention to what it would return if the value to what you are searching for never occurs.</li>
+
+			<li>Create a function named "contains" that takes in two parameters (string, subString). Conditionally set it to return false if the value of the subString is not found and would return true if found.
+			</li>
+			<li>Now create a new function called "validate" that takes in three parameters(firsname, lastname, email) and using the above function ("contains"), --create this new "validate" function to return true or false when the email address entered is valid. (typical email address has : name@email.com format) What are you checking for in this "validate" function?s
+			</li>
+		</ol>
+		When you are done with this assignment, please explore in MDN String Methods, Number Methods and Math Properties and Methods to get more familiar with the tools, functions, and methods that are available.
+
+	</p>
+
+<script type="text/javascript">
+
+// var str = "Hello world, welcome to the universe.";
+// var n = str.indexOf("welcome");
+
+function contains (string, subString) {
+if (subString != null) { 
+return false
+} else  { 
+	return true; }
+}
+
+function validate (firstName, lastName, email) {
+// I want to make sure they enter in the requested info
+if (firstName == "") {
+	return "You must provide your First Name";
+} else if (lastName == "") {
+	return "You must provide your Last Name";
+} else if (email == "") {
+	return "You must provide your email address"
+}
+
+// i want to make sure they included a valid email address 
+var emailValid = email.indexOf('@');
+if (emailValid !="-1") {
+	return "That's a valid email address";
+} else {
+	return "That's not a valid email address";
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
